@@ -1,0 +1,17 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+  
+    <bean id="springHelloWorld" class="com.test.helloworld.SpringHelloWorld"></bean>
+    
+    <bean id="strutsHelloWorld" class="com.test.helloworld.StrutsHelloWorld"></bean>
+    
+    <bean id="helloWorldService" class="com.test.service.HelloWorldService">
+        <property name="helloWorld" ref="springHelloWorld"/>
+    </bean>
+    
+    <bean id="animal" class="com.test.pojo.Animal">
+    	<property name="category" value="Cat" />
+    </bean>
+</beans>

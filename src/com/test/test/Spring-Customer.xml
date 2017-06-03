@@ -1,0 +1,21 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<!-- 	<bean id="customerDAO" class="com.test.dao.JdbcCustomerDao"> -->
+<!-- 		<property name="dataSource" ref="dataSource" /> -->
+<!-- 	</bean> -->
+	<bean id="customerDAO" class="com.test.dao.JdbcCustomerDaoPlus">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	
+	<!-- byName--> 
+	<!-- customer的addr属性名称和addr bean相同 -->
+	<bean id="customer" class="com.test.pojo.Customer" autowire="byName"/>
+	
+	<bean id="addr" class="com.test.pojo.Address">
+		<property name="fulladdr" value="ZhangDong Road,1388" />
+	</bean>
+</beans>
