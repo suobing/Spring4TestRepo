@@ -19,6 +19,7 @@
 		<property name="fulladdr" value="ZhangDong Road,1388" />
 	</bean>
 	
+	
 	<!-- byType-->
 	<!--person的属性ability类型和steal bean类型相同 -->
 	<!-- 	只能有一个bean为Ability类型，否则出错 -->
@@ -31,5 +32,13 @@
 	<bean id="steal" class="com.test.pojo.Ability">
 		<property name="skill" value="Steal"/>
 	</bean>
+	
+	
+	<!-- 	constructor -->
+	<bean id="developer" class="com.test.pojo.Developer" autowire="constructor"/>
+	<bean id="lang" class="com.test.pojo.Language">
+		<property name="name" value="Python" />
+	</bean>	
+	
 </beans>
 

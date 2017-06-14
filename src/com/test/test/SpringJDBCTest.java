@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.test.dao.CustomerDao;
 import com.test.pojo.Customer;
+import com.test.pojo.Developer;
 import com.test.pojo.Person;
 
 public class SpringJDBCTest {
@@ -36,5 +37,9 @@ public class SpringJDBCTest {
 		System.out.println(person.getAbility().getSkill());
 //		System.out.println(System.getProperty("user.dir"));
 		System.out.println(System.getProperty("java.class.path"));
+		
+		//by Constructor
+		Developer developer = (Developer)cfx.getBean("developer");
+		System.out.println(developer.getLanguage().getName());
 	}
 }
