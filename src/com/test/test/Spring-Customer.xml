@@ -1,7 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	
+	xmlns:context="http://www.springframework.org/schema/context"
+	
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-2.5.xsd">
 
 <!-- 	<bean id="customerDAO" class="com.test.dao.JdbcCustomerDao"> -->
 <!-- 		<property name="dataSource" ref="dataSource" /> -->
@@ -40,5 +46,22 @@
 		<property name="name" value="Python" />
 	</bean>	
 	
+	<!-- 	@Autowired 下面两种方式配置-->
+<!-- 	<context:annotation-config /> --><!-- 配合根节点声明使用 -->
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+	
+<!-- @Autowired注解是通过匹配数据类型自动装配Bean。 -->
+	<bean id="soldierBean" class="com.test.pojo.Soldier">
+		<property name="category" value="archer" />
+	</bean>
+	
+	<bean id="weaponBean1" class="com.test.pojo.Weapon">
+		<property name="name" value="bow" />
+	</bean>
+	
+	<bean id="weaponBean2" class="com.test.pojo.Weapon">
+		<property name="name" value="sword" />
+	</bean>
+		
 </beans>
 

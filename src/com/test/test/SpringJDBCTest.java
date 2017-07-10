@@ -7,6 +7,7 @@ import com.test.dao.CustomerDao;
 import com.test.pojo.Customer;
 import com.test.pojo.Developer;
 import com.test.pojo.Person;
+import com.test.pojo.Soldier;
 
 public class SpringJDBCTest {
 	public static void main(String[] args){
@@ -41,5 +42,9 @@ public class SpringJDBCTest {
 		//by Constructor
 		Developer developer = (Developer)cfx.getBean("developer");
 		System.out.println(developer.getLanguage().getName());
+		
+		//@Autowired
+		Soldier soldier = (Soldier)cfx.getBean("soldierBean");
+		System.out.println(soldier.getWeapon().getName());
 	}
 }

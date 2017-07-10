@@ -8,4 +8,10 @@ public class StrutsHelloWorld implements HelloWorld{
 		System.out.println("Struts say Hello!");
 	}
 
+	@Override
+	public Integer foo() {//方法重写，返回类型可以是其子类(Object->Integer)
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

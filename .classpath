@@ -12,5 +12,6 @@
 	<classpathentry kind="lib" path="lib/spring-jdbc-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.42-bin.jar"/>
 	<classpathentry kind="lib" path="lib/spring-tx-4.2.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/spring-aop-4.2.4.RELEASE.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

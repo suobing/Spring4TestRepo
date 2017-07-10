@@ -8,4 +8,11 @@ public class SpringHelloWorld implements HelloWorld{
 		System.out.println("Spring say Hello!");		
 	}
 
+	@Override
+	public String foo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }
